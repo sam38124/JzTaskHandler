@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/sam38124/JzFrameWork.svg)](https://jitpack.io/#sam38124/JzFrameWork)
+[![](https://jitpack.io/v/sam38124/JzTaskHandler.svg)](https://jitpack.io/#sam38124/JzTaskHandler)
 [![Platform](https://img.shields.io/badge/平台-%20Android%20-brightgreen.svg)](https://github.com/sam38124)
 [![characteristic](https://img.shields.io/badge/特點-%20輕量級%20%7C%20簡單易用%20%20%7C%20穩定%20-brightgreen.svg)](https://github.com/sam38124)
 # JzTaskHandler
@@ -29,7 +29,7 @@ allprojects {
 在需要用到這個庫的module中的build.gradle中的dependencies中加入
 ```kotlin
 dependencies {
-implementation 'com.github.sam38124: JzTaskHandler:v8.4'
+implementation 'com.github.sam38124:JzTaskHandler:1.0'
 ```
 <a name="Use"></a>
 ## 任務處理
