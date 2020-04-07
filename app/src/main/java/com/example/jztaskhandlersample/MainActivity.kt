@@ -16,6 +16,15 @@ class MainActivity : AppCompatActivity() {
             TaskHandler.newInstance.runTaskTimer("s",0.01, runner{
                 Log.e("runner","run")
             })
+            TaskHandler.newInstance.runTaskMultiple("s",5, runner{
+                Log.e("runner","run")
+            })
+            TaskHandler.newInstance.runTaskOnce("s", runner{
+                Log.e("runner","run")
+            })
+            val clock=TaskHandler.newInstance.clock()
+            clock.Zeroing()
+            clock.stop()
         }
     }
 }

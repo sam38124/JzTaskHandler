@@ -19,7 +19,6 @@ import java.util.*
     fun getDatePoor(endDate: Date, nowDate: Date): Double {
         val diff = endDate.time - nowDate.time
         val sec = diff.toDouble() / 1000
-        Log.e("stop",""+sec)
         return sec.toDouble()
     }
 }
