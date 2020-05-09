@@ -4,6 +4,8 @@
 # JzTaskHandler
 這是一套非常簡單使用的Android任務處理框架~~<br>
 覺得好用就順手STAR吧!!
+
+[ios版本](https://github.com/sam38124/JzOsTaskHandler)
 ## 目錄
 * [如何導入到專案](#Import)
 * [任務處理](#Use)
