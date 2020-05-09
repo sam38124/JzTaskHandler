@@ -27,7 +27,6 @@ companion object{
             }
         }
         override fun runTaskTimer(tag: String,time:Double, callback: runner) {
-
             for(i in runnerTimer){
                 if(i.tag==tag){
                     if(i.timer.stop()<time){return}
@@ -44,7 +43,9 @@ companion object{
 
         override fun runTaskMultiple(tag: String,count:Int, callback: runner) {
             var havecount=0
-            if(runtag.contains(tag)){havecount+=1}
+            for(i in runtag){
+                if(i==tag){havecount+=1}
+            }
             if(havecount==count){return}
                 runtag.add(tag)
                 callback.run()
