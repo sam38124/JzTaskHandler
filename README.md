@@ -55,7 +55,7 @@ TaskHandler.newInstance.runTaskMultiple("TAG",5, runner{
 #### 每個任務間隔必須大於自定義秒數才能開啟新任務
 ```kotlin
 //這裡的範例為，至少需2.5秒才可以開始執行新任務
-       TaskHandler.newInstance.runTaskTimer("s",2.5, runner{
+       TaskHandler.newInstance.runTaskDelay("s",2.5, runner{
                 Log.e("runner","run")
             })
 ```
