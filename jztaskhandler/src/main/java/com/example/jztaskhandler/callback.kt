@@ -16,4 +16,8 @@ interface callback{
     fun runTaskMultiple(tag:String,count:Int,callback: runner)
     //執行timer，此timer會根據fragment的生命週期銷毀或繼續執行
     fun runTaskTimer(life: Lifecycle,time:Long,delay:Long,callback:runner): LifeTimer
+    //將任務儲存於佇列當中
+    fun funStoreTask(tag:String,callback: runner)
+    //執行儲存的佇列
+    fun runTask(tag:String)
 }

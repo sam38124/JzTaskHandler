@@ -16,7 +16,8 @@ class TaskHandler {
             }
 
     }
-
+    class stTask(var tag:String,var callback:runner)
+    var storeTask=ArrayList<stTask>()
     var callback = object : callback {
         override fun runTaskTimer(
             life: Lifecycle,
@@ -27,6 +28,19 @@ class TaskHandler {
             val timer = LifeTimer(life)
             timer.schedule(delay, time, callback)
             return timer
+        }
+
+        override fun funStoreTask(tag: String, callback: runner) {
+            storeTask.add(stTask(tag,callback))
+        }
+
+        override fun runTask(tag: String) {
+           for(i in storeTask){
+               if(i.tag==tag){
+                   i.callback.run()
+               }
+           }
+            storeTask=ArrayList(storeTask.filter { it.tag!=tag })
         }
 
         override fun clock(): JzClock {
