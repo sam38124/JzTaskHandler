@@ -84,6 +84,7 @@ var time=clock.stop()
 <a name="All"></a>
 ### 所有對外暴露的方法
 ```kotlin
+
 interface callback{
     //取得碼表
     fun clock(): JzClock
@@ -93,8 +94,14 @@ interface callback{
     fun runTaskDelay(tag:String,time:Double, callback: runner)
     //執行任務處理，並且限制可同時執行數量
     fun runTaskMultiple(tag:String,count:Int,callback: runner)
-    //執行timer，此timer會根據生命週期銷毀或繼續執行
+    //執行timer，此timer會根據fragment的生命週期銷毀或繼續執行
     fun runTaskTimer(life: Lifecycle,time:Long,delay:Long,callback:runner): LifeTimer
+    //將任務儲存於佇列當中
+    fun funStoreTask(tag:String,callback: runner)
+    //執行儲存的佇列可執行多項
+    fun runTaskMultipe(tag:String)
+    //執行儲存的佇列只執行最後添加的
+    fun runTaskOne(tag:String)
 }
 ```
 
