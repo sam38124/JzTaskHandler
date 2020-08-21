@@ -31,15 +31,24 @@ class TaskHandler {
         }
 
         override fun funStoreTask(tag: String, callback: runner) {
-            storeTask.add(stTask(tag,callback))
+            storeTask.add(0,stTask(tag,callback))
         }
 
-        override fun runTask(tag: String) {
+        override fun runTaskMultipe(tag: String) {
            for(i in storeTask){
                if(i.tag==tag){
                    i.callback.run()
                }
            }
+            storeTask=ArrayList(storeTask.filter { it.tag!=tag })
+        }
+        override fun runTaskOne(tag: String) {
+            for(i in storeTask){
+                if(i.tag==tag){
+                    i.callback.run()
+                    break
+                }
+            }
             storeTask=ArrayList(storeTask.filter { it.tag!=tag })
         }
 

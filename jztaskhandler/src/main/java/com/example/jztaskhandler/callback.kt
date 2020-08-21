@@ -18,6 +18,8 @@ interface callback{
     fun runTaskTimer(life: Lifecycle,time:Long,delay:Long,callback:runner): LifeTimer
     //將任務儲存於佇列當中
     fun funStoreTask(tag:String,callback: runner)
-    //執行儲存的佇列
-    fun runTask(tag:String)
+    //執行儲存的佇列可執行多項
+    fun runTaskMultipe(tag:String)
+    //執行儲存的佇列只執行最後添加的
+    fun runTaskOne(tag:String)
 }
